@@ -1,0 +1,54 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(245, 200, 209, 0.808);
+    font-family: sans-serif;
+}
+
+.calc-body {
+    display: grid;
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: minmax(100px, auto)repeat(5, 70px);
+}
+
+.calc-body > button {
+    font-size: 18px;
+    outline: none;
+    border: 1px solid rgba(238, 5, 48, 0.308);
+    background: rgba(255, 255, 255, 0.801);
+}
+
+.calc-display {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    background: rgba(238, 5, 48, 0.308);
+}
+
+.calc-display-prev {
+    font-size: 16px;
+}
+
+.calc-display-current {
+    font-size: 20px;
+}
+
+.calc-body > button:hover {
+    background: rgba(255, 255, 255, 0.555);
+}
+
+.span-two {
+    grid-column: span 2;
+}
